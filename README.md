@@ -6,7 +6,7 @@ Provide employers with an app to track workers that must travel to different loc
 
 ## Current Version (0.0.0)
 
-Initialized with a README.md.
+Initialized with a README.md. Manifest is updated and layouts have been turned relative. Strings have been added.
 
 ## Previous Versions
 
