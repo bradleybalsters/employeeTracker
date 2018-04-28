@@ -1,7 +1,21 @@
 <resources>
     <string name="app_name">Employee Tracker</string>
 
+    <string name="defaultEmployee">Default Name</string>
     <string name="employee1">Cole Jacobs</string>
     <string name="employee2">Bob Lindsay</string>
     <string name="employee3">Kyra Mill</string>
+
+    <string name="defaultTask">Default Task</string>
+
+    <string name="defaultTimer">00:00:00</string>
+
+    <string name="employee">Employee</string>
+    <string name="employer">Employer</string>
+
+    <string name="checkIn">Check In</string>
+    <string name="checkOut">Check Out</string>
+
+    <string name="employeeName">Employee Name</string>
+    <string name="exit">Exit</string>
 </resources>
