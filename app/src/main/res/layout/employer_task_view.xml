@@ -51,7 +51,7 @@
         android:text="@string/edit"
         android:textSize="20sp"
         android:layout_below="@id/checkBox3"
-        android:layout_marginTop="180dp" />
+        android:layout_marginTop="120dp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -60,7 +60,7 @@
         android:text="@string/clear"
         android:textSize="20sp"
         android:layout_below="@id/checkBox3"
-        android:layout_marginTop="180dp"
+        android:layout_marginTop="120dp"
         android:layout_marginStart="40dp"/>
 
     <Button
@@ -71,6 +71,6 @@
         android:textSize="20sp"
         android:layout_below="@id/checkBox3"
         android:layout_marginStart="260dp"
-        android:layout_marginTop="180dp" />
+        android:layout_marginTop="120dp" />
 
 </RelativeLayout>
