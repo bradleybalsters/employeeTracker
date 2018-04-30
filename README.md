@@ -4,10 +4,10 @@
 
 Provide employers with an app to track workers that must travel to different locations in order to complete tasks and jobs. These tasks will be location-dependent, and can be chacked off as the user is moving to the task area.
 
-## Current Version (0.0.0)
+## Current Version (0.0.1)
 
-Initialized with a README.md. Manifest is updated and layouts have been turned relative. Strings have been added.
+All layouts fully designed. The next versions will implement drawables, and plug-in the timer and MapView features.
 
 ## Previous Versions
 
-None
+(0.0.0) Initialized with a README.md. Manifest is updated and layouts have been turned relative. Strings have been added.
