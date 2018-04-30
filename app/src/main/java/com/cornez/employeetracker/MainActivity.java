@@ -84,17 +84,17 @@ public class MainActivity extends AppCompatActivity
         mHandler.removeCallbacks(updateTimerRunnable);
     }
 
-    public void resetTimer(View view){
+    public void resetTimer(View view) {
         watchTime.resetWatchTime();
-        timeInMilliseconds =0L;
+        timeInMilliseconds = 0L;
 
         int minutes = 0;
         int seconds = 0;
         int milliseconds = 0;
 
-        timeDisplay.setText(String.format("%02d",minutes)+":"+String.format("%02d",seconds)+
-                ":"+String.format("%02d", milliseconds));
+        timeDisplay.setText(String.format("%02d", minutes) + ":" + String.format("%02d", seconds) +
+                ":" + String.format("%02d", milliseconds));
 
 
-
+        }
     }
