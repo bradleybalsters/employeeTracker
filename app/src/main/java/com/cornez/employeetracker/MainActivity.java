@@ -28,10 +28,12 @@ public class MainActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_main);
 
-        timeDisplay = (TextView) findViewById(R.id.textView1);
-        startBtn = (Button) findViewById(R.id.start_button);
-        stopBtn = (Button) findViewById(R.id.stop_button);
-        resetBtn = (Button) findViewById(R.id.reset_button);
+        // will un comment out all of the commented out buttons once I have references for them.
+
+        //timeDisplay = (TextView) findViewById(R.id.textView1);
+        //startBtn = (Button) findViewById(R.id.start_button);
+        //stopBtn = (Button) findViewById(R.id.stop_button);
+        //resetBtn = (Button) findViewById(R.id.reset_button);
 
         stopBtn.setEnabled(false);
         resetBtn.setEnabled(false);
