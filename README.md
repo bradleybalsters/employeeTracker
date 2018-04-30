@@ -6,6 +6,8 @@ Provide employers with an app to track workers that must travel to different loc
 
 ## Current Version (0.0.1)
 
+MapView resource: https://gist.github.com/joshdholtz/4522551
+
 All layouts fully designed. The next versions will implement drawables, and plug-in the timer and MapView features.
 
 ## Previous Versions
