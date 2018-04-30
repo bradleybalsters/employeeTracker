@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_screen);
 
-        setContentView(R.layout.activity_my);
+        setContentView(R.layout.activity_main);
 
         timeDisplay = (TextView) findViewById(R.id.textView1);
         startBtn = (Button) findViewById(R.id.start_button);
