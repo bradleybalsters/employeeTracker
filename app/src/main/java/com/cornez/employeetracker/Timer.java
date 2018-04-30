@@ -1,6 +1,7 @@
 package com.cornez.employeetracker;
 
 public class Timer {
+    //This shouldn't need to be changed much unless references are changed
 
     private long mStartTime;
     private long mTimeUpate;
