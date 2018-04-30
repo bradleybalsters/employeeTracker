@@ -19,6 +19,8 @@ public class LandingScreenActivity extends AppCompatActivity
     Button btnEmployer = (Button) findViewById(R.id.landingEmployerButton);
     Button btnEmployee = (Button) findViewById(R.id.landingEmployeeButton);
 
+
+
     View.OnClickListener handler = new View.OnClickListener()
     {
         public void onClick(View v)
