@@ -22,7 +22,7 @@
         android:layout_below="@id/mapView"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:textColor="black"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:layout_width="wrap_content"
@@ -33,7 +33,7 @@
         android:layout_below="@id/mapEmpNameTextView"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
-        android:textColor="black"/>
+        android:textColor="@color/black"/>
 
     <TextView
         android:layout_width="wrap_content"

@@ -6,6 +6,73 @@
     android:id="@+id/employerViewLayout"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/employerViewCheckedIn"
+        android:text="@string/checkedIn"
+        android:layout_centerHorizontal="true"
+        android:textSize="30sp"
+        android:textColor="@color/black" />
 
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/employerViewCheckedIn"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:id="@+id/employerViewRadioGroup">
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/employee1"
+            android:textSize="20sp" />
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/employee2"
+            android:textSize="20sp"/>
+
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/employee3"
+            android:textSize="20sp"/>
+
+    </RadioGroup>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/employerViewEditButton"
+        android:text="@string/tasks"
+        android:textSize="20sp"
+        android:layout_below="@+id/employerViewRadioGroup"
+        android:layout_marginTop="150dp" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/employerViewClearButton"
+        android:text="@string/view"
+        android:textSize="20sp"
+        android:layout_below="@+id/employerViewRadioGroup"
+        android:layout_marginTop="150dp"
+        android:layout_marginStart="40dp"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/employerViewBackButton"
+        android:text="@string/exit"
+        android:textSize="20sp"
+        android:layout_below="@+id/employerViewRadioGroup"
+        android:layout_marginStart="260dp"
+        android:layout_marginTop="150dp" />
 
 </RelativeLayout>
