@@ -11,6 +11,7 @@
         android:layout_height="wrap_content"
         android:width="250dp"
         android:layout_centerHorizontal="true"
+        android:id="@+id/empViewInButton"
         android:layout_above="@+id/empViewOutButton"
         android:layout_marginBottom="85dp"
         android:textSize="30sp"
@@ -33,7 +34,7 @@
         android:id="@+id/empViewEditLabel"
         android:text="@string/employeeName"
         android:layout_below="@id/empViewOutButton"
-        android:layout_marginTop="350dp"
+        android:layout_marginTop="50dp"
         android:textSize="20sp"
         android:labelFor="@id/empViewEditText"/>
 

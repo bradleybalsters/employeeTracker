@@ -45,6 +45,22 @@
                     android:label="@string/app_name" />
             </intent-filter>
         </activity>
+        <activity android:name=".EmployeeTaskActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.EmployeeTask"
+                    android:screenOrientation="portrait"
+                    android:label="@string/app_name" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".EmployerTaskActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.EmployerTask"
+                    android:screenOrientation="portrait"
+                    android:label="@string/app_name" />
+            </intent-filter>
+        </activity>
 
 
     </application>
