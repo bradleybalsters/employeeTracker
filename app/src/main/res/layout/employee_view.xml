@@ -15,7 +15,8 @@
         android:layout_above="@+id/empViewOutButton"
         android:layout_marginBottom="85dp"
         android:textSize="30sp"
-        android:text="@string/checkIn" />
+        android:text="@string/checkIn"
+        android:onClick="changeLayout"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -25,7 +26,8 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:textSize="30sp"
-        android:text="@string/checkOut" />
+        android:text="@string/checkOut"
+        android:onClick="changeLayout"/>
 
     <TextView
         android:layout_width="wrap_content"
