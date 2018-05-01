@@ -47,7 +47,8 @@
         android:text="@string/edit"
         android:textSize="20sp"
         android:layout_below="@+id/taskViewRadioGroup"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="150dp"
+        android:onClick="changeLayout"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -57,7 +58,8 @@
         android:textSize="20sp"
         android:layout_below="@+id/taskViewRadioGroup"
         android:layout_marginTop="150dp"
-        android:layout_marginStart="40dp"/>
+        android:layout_marginStart="40dp"
+        android:onClick="changeLayout"/>
 
     <Button
         android:layout_width="wrap_content"
@@ -67,6 +69,7 @@
         android:textSize="20sp"
         android:layout_below="@+id/taskViewRadioGroup"
         android:layout_marginStart="260dp"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="150dp"
+        android:onClick="changeLayout"/>
 
 </RelativeLayout>
