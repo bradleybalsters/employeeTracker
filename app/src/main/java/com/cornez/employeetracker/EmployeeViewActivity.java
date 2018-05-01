@@ -8,17 +8,20 @@ import android.widget.Button;
 
 public class EmployeeViewActivity extends AppCompatActivity
 {
+    Button btnIn;
+    Button btnOut;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         setContentView(R.layout.employee_view);
+        btnIn = (Button) findViewById(R.id.empViewInButton);
+        btnOut= (Button) findViewById(R.id.empViewOutButton);
     }
 
     //Transition between layouts
-    final Button btnIn = (Button) findViewById(R.id.empViewInButton);
-    final Button btnOut= (Button) findViewById(R.id.empViewOutButton);
-
     public void changeLayout(View view)
     {
         View.OnClickListener handler = new View.OnClickListener()

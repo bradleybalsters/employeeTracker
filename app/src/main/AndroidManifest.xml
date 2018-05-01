@@ -2,10 +2,6 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.cornez.employeetracker">
 
-    <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="15" />
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -37,28 +33,37 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity"
+            android:parentActivityName=".LandingScreenActivity">
             <intent-filter>
                 <action
-                    android:name="android.intent.action.Map"
+                    android:name="com.cornez.employeeTracker.MAIN"
                     android:screenOrientation="portrait"
                     android:label="@string/app_name"/>
             </intent-filter>
         </activity>
 
-        <activity android:name=".EmployerViewActivity">
+        <activity android:name=".EmployerViewActivity"
+            android:parentActivityName=".LandingScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LandingScreenActivity" />
             <intent-filter>
                 <action
-                    android:name="android.intent.action.EmployerView"
+                    android:name="com.cornez.employeeTracker.VIEW"
                     android:screenOrientation="portrait"
                     android:label="@string/app_name" />
             </intent-filter>
         </activity>
 
-        <activity android:name=".EmployeeViewActivity">
+        <activity android:name=".EmployeeViewActivity"
+            android:parentActivityName=".LandingScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".LandingScreenActivity" />
             <intent-filter>
                 <action
-                    android:name="android.intent.action.EmployeeView"
+                    android:name="com.cornez.employeeTracker.VIEW"
                     android:screenOrientation="portrait"
                     android:label="@string/app_name" />
             </intent-filter>
@@ -66,7 +71,7 @@
         <activity android:name=".EmployeeTaskActivity">
             <intent-filter>
                 <action
-                    android:name="android.intent.action.EmployeeTask"
+                    android:name="com.cornez.employeeTracker.VIEW"
                     android:screenOrientation="portrait"
                     android:label="@string/app_name" />
             </intent-filter>
@@ -74,7 +79,7 @@
         <activity android:name=".EmployerTaskActivity">
             <intent-filter>
                 <action
-                    android:name="android.intent.action.EmployerTask"
+                    android:name="com.cornez.employeeTracker.VIEW"
                     android:screenOrientation="portrait"
                     android:label="@string/app_name" />
             </intent-filter>

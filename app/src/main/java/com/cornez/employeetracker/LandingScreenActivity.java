@@ -8,19 +8,22 @@ import android.widget.Button;
 
 public class LandingScreenActivity extends AppCompatActivity
 {
+    Button btnEmployer;
+    Button btnEmployee;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_screen);
+
+        btnEmployer = (Button) findViewById(R.id.landingEmployerButton);
+        btnEmployee = (Button) findViewById(R.id.landingEmployeeButton);
     }
 
     // Transitions between layouts
     public void changeLayout(View view)
     {
-        final Button btnEmployer = (Button) findViewById(R.id.landingEmployerButton);
-        final Button btnEmployee = (Button) findViewById(R.id.landingEmployeeButton);
-
         View.OnClickListener handler = new View.OnClickListener()
         {
             public void onClick(View v)
@@ -30,6 +33,7 @@ public class LandingScreenActivity extends AppCompatActivity
                     Intent intentMain = new Intent(LandingScreenActivity.this,
                             EmployerViewActivity.class);
                     LandingScreenActivity.this.startActivity(intentMain);
+
                 }
                 if (v == btnEmployee)
                 {
