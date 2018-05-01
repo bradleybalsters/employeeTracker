@@ -46,6 +46,24 @@
             </intent-filter>
         </activity>
 
+        <activity android:name=".EmployerViewActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.EmployerView"
+                    android:screenOrientation="portrait"
+                    android:label="@string/app_name" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".EmployeeViewActivity">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.EmployeeView"
+                    android:screenOrientation="portrait"
+                    android:label="@string/app_name" />
+            </intent-filter>
+        </activity>
+
 
     </application>
 
