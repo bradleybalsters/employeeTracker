@@ -8,18 +8,22 @@ import android.widget.Button;
 
 public class EmployerTaskActivity extends AppCompatActivity
 {
+    Button btnClear;
+    Button btnEdit;
+    Button btnBack;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.employee_view);
+
+        btnClear = (Button) findViewById(R.id.taskViewClearButton);
+        btnEdit = (Button) findViewById(R.id.taskViewEditButton);
+        btnBack = (Button) findViewById(R.id.taskViewBackButton);
     }
 
     //Transition between layouts
-    final Button btnClear = (Button) findViewById(R.id.taskViewClearButton);
-    final Button btnEdit = (Button) findViewById(R.id.taskViewEditButton);
-    final Button btnBack = (Button) findViewById(R.id.taskViewBackButton);
-
     public void changeLayout(View view)
     {
         View.OnClickListener handler = new View.OnClickListener()
