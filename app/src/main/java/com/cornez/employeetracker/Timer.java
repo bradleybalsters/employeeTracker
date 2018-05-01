@@ -35,6 +35,7 @@ public class Timer {
         return mTimeUpate;
     }
 
+    //Will this be used at all?
     public void addStoredTime(long timeInMilliseconds){
         mStoredTime += timeInMilliseconds;
     }

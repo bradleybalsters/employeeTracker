@@ -23,7 +23,7 @@ public class Map extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         //Look into how to inflate the map.
-        View v = inflater.inflate(R.layout.some_layout, container, false);
+        View v = inflater.inflate(R.layout.activity_main, container, false);
 
         // Gets the MapView from the XML layout and creates it
         mapView = (MapView) v.findViewById(R.id.mapview);
