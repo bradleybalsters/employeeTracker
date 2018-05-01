@@ -26,7 +26,7 @@ public class Map extends Fragment {
         View v = inflater.inflate(R.layout.activity_main, container, false);
 
         // Gets the MapView from the XML layout and creates it
-        mapView = (MapView) v.findViewById(R.id.mapview);
+        mapView = (MapView) v.findViewById(R.id.mapView);
         mapView.onCreate(savedInstanceState);
 
         // Gets to GoogleMap from the MapView and does initialization stuff
