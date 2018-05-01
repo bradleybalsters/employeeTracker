@@ -7,7 +7,7 @@ public class Timer {
     private long mTimeUpate;
     private long mStoredTime;
 
-    public WatchTime(){
+    public Timer(){
         mStartTime = 0L;
         mStoredTime = 0L;
         mTimeUpate = 0L;
@@ -35,6 +35,7 @@ public class Timer {
         return mTimeUpate;
     }
 
+    //Will this be used at all?
     public void addStoredTime(long timeInMilliseconds){
         mStoredTime += timeInMilliseconds;
     }
