@@ -23,6 +23,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".LandingScreenActivity">
             <intent-filter>
                 <action
@@ -68,7 +69,12 @@
                     android:label="@string/app_name" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmployeeTaskActivity">
+
+        <activity android:name=".EmployeeTaskActivity"
+            android:parentActivityName=".EmployeeViewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EmployeeViewActivity" />
             <intent-filter>
                 <action
                     android:name="com.cornez.employeeTracker.VIEW"
@@ -76,7 +82,12 @@
                     android:label="@string/app_name" />
             </intent-filter>
         </activity>
-        <activity android:name=".EmployerTaskActivity">
+
+        <activity android:name=".EmployerTaskActivity"
+            android:parentActivityName=".EmployerViewActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EmployerViewActivity" />
             <intent-filter>
                 <action
                     android:name="com.cornez.employeeTracker.VIEW"
