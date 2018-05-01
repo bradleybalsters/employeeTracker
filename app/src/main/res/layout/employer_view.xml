@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/employerViewEditButton"
+        android:id="@+id/employerViewTaskButton"
         android:text="@string/tasks"
         android:textSize="20sp"
         android:layout_below="@+id/employerViewRadioGroup"
@@ -58,7 +58,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/employerViewClearButton"
+        android:id="@+id/employerViewButton"
         android:text="@string/view"
         android:textSize="20sp"
         android:layout_below="@+id/employerViewRadioGroup"
@@ -68,7 +68,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/employerViewBackButton"
+        android:id="@+id/employerViewExitButton"
         android:text="@string/exit"
         android:textSize="20sp"
         android:layout_below="@+id/employerViewRadioGroup"
