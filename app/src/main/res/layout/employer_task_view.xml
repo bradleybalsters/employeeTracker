@@ -53,6 +53,8 @@
         android:text="@string/defaultTask" />
 
     <Button
+        android:background="@drawable/prebtnbckgrd"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -64,6 +66,8 @@
         android:onClick="changeLayout"/>
 
     <Button
+        android:background="@drawable/prebtnbckgrd"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/taskViewClearButton"
@@ -75,6 +79,8 @@
         android:onClick="changeLayout"/>
 
     <Button
+        android:background="@drawable/prebtnbckgrd"
+        android:textColor="@color/white"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/taskViewBackButton"

@@ -16,6 +16,7 @@
     </FrameLayout>
 
     <Button
+        android:background="@drawable/prebtnbckgrd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="250dp"
@@ -24,13 +25,16 @@
         android:layout_above="@+id/empViewOutButton"
         android:layout_marginBottom="85dp"
         android:textSize="30sp"
+        android:textColor="@color/white"
         android:text="@string/checkIn"
         android:onClick="changeLayout"/>
 
     <Button
+        android:background="@drawable/prebtnbckgrd"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:width="250dp"
+        android:textColor="@color/white"
         android:id="@+id/empViewOutButton"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
