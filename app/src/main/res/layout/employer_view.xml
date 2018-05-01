@@ -49,30 +49,33 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:id="@+id/employerViewEditButton"
+        android:id="@+id/employerViewTaskButton"
         android:text="@string/tasks"
         android:textSize="20sp"
         android:layout_below="@+id/employerViewRadioGroup"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="150dp"
+        android:onClick="changeLayout"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/employerViewClearButton"
+        android:id="@+id/employerViewButton"
         android:text="@string/view"
         android:textSize="20sp"
         android:layout_below="@+id/employerViewRadioGroup"
         android:layout_marginTop="150dp"
-        android:layout_marginStart="40dp"/>
+        android:layout_marginStart="40dp"
+        android:onClick="changeLayout"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/employerViewBackButton"
+        android:id="@+id/employerViewExitButton"
         android:text="@string/exit"
         android:textSize="20sp"
         android:layout_below="@+id/employerViewRadioGroup"
         android:layout_marginStart="260dp"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="150dp"
+        android:onClick="changeLayout"/>
 
 </RelativeLayout>
