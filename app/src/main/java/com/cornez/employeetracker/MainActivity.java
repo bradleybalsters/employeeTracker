@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity
 {
-
+    private TextView name;
     private TextView timeDisplay;
     private Button startBtn;
     private Button stopBtn;
@@ -35,7 +35,10 @@ public class MainActivity extends AppCompatActivity
         //stopBtn = (Button) findViewById(R.id.stop_button);
         //resetBtn = (Button) findViewById(R.id.reset_button);
 
-        stopBtn.setEnabled(false);
+        name = (TextView) findViewById(R.id.mapEmpNameTextView);
+        name.setText(EmployerViewActivity.taggedEmployee);
+
+                stopBtn.setEnabled(false);
         resetBtn.setEnabled(false);
 
         watchTime = new Timer();
