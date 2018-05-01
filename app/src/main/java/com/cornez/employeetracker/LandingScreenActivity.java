@@ -16,7 +16,7 @@ public class LandingScreenActivity extends AppCompatActivity
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_screen);
-
+        overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         btnEmployer = (Button) findViewById(R.id.landingEmployerButton);
         btnEmployee = (Button) findViewById(R.id.landingEmployeeButton);
     }
