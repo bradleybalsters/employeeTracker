@@ -31,13 +31,13 @@ public class EmployeeViewActivity extends AppCompatActivity
                 if (v == btnIn)
                 {
                     Intent intentMain = new Intent(EmployeeViewActivity.this,
-                            EmployeeViewActivity.class);
+                            EmployeeTaskActivity.class);
                     EmployeeViewActivity.this.startActivity(intentMain);
                 }
                 if (v == btnOut)
                 {
                     Intent intentMain = new Intent(EmployeeViewActivity.this,
-                            EmployeeViewActivity.class);
+                            LandingScreenActivity.class);
                     EmployeeViewActivity.this.startActivity(intentMain);
                 }
             }

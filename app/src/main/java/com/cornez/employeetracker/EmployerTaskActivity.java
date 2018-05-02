@@ -30,14 +30,14 @@ public class EmployerTaskActivity extends AppCompatActivity
         {
             public void onClick(View v)
             {
-                if (v == btnClear)
-                {
-
-                }
-                if (v == btnEdit)
-                {
-
-                }
+//                if (v == btnClear)
+//                {
+//
+//                }
+//                if (v == btnEdit)
+//                {
+//
+//                }
                 if (v == btnBack)
                 {
                     Intent intentMain = new Intent(EmployerTaskActivity.this,
@@ -47,8 +47,8 @@ public class EmployerTaskActivity extends AppCompatActivity
             }
         };
 
-        btnEdit.setOnClickListener(handler);
-        btnClear.setOnClickListener(handler);
+//        btnEdit.setOnClickListener(handler);
+//        btnClear.setOnClickListener(handler);
         btnBack.setOnClickListener(handler);
     }
 }
