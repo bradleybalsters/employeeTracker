@@ -10,7 +10,7 @@ public class EmployeeTaskActivity extends AppCompatActivity
 {
     Button btnView;
     Button btnClear;
-    Button btnEdit;
+    Button btnBack;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -18,9 +18,9 @@ public class EmployeeTaskActivity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.employee_task_view);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
-        btnView = (Button) findViewById(R.id.taskView2BackButton);
-        btnClear= (Button) findViewById(R.id.taskView2ClearButton);
-        btnEdit = (Button) findViewById(R.id.taskView2EditButton);
+        btnView = (Button) findViewById(R.id.taskViewButton);
+        btnClear= (Button) findViewById(R.id.taskClearButton);
+        btnBack = (Button) findViewById(R.id.taskViewBackButton);
     }
 
     //Transition between layouts
@@ -36,9 +36,11 @@ public class EmployeeTaskActivity extends AppCompatActivity
                             MainActivity.class);
                     EmployeeTaskActivity.this.startActivity(intentMain);
                 }
-                if (v == btnEdit)
+                if (v == btnBack)
                 {
-
+                    Intent intentMain = new Intent(EmployeeTaskActivity.this,
+                            EmployeeViewActivity.class);
+                    EmployeeTaskActivity.this.startActivity(intentMain);
                 }
                 if (v == btnClear)
                 {
@@ -48,7 +50,7 @@ public class EmployeeTaskActivity extends AppCompatActivity
         };
 
         btnView.setOnClickListener(handler);
-        btnEdit.setOnClickListener(handler);
+        btnBack.setOnClickListener(handler);
         btnClear.setOnClickListener(handler);
     }
 }
