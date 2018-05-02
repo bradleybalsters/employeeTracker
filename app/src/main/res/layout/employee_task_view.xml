@@ -36,6 +36,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/firstRB"
             android:text="@string/defaultTaskName"
             android:textColor="@color/white"
             android:buttonTint="@color/white"
@@ -44,6 +45,7 @@
         <RadioButton
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:id="@+id/secondRB"
             android:layout_marginTop="20dp"
             android:text="@string/defaultTaskName"
             android:textColor="@color/white"
