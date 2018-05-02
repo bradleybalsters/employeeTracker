@@ -36,6 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/employee1"
+            android:id="@+id/employee1"
             android:textSize="20sp" />
 
         <RadioButton
@@ -43,6 +44,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/employee2"
+            android:id="@+id/employee2"
             android:textSize="20sp"/>
 
         <RadioButton
@@ -50,6 +52,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:text="@string/employee3"
+            android:id="@+id/employee3"
             android:textSize="20sp"/>
 
     </RadioGroup>

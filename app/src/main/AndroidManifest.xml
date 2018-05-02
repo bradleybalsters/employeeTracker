@@ -25,6 +25,9 @@
         android:theme="@style/AppTheme">
 
         <activity android:name=".LandingScreenActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".EmployerViewActivity" />
             <intent-filter>
                 <action
                     android:name="android.intent.action.MAIN"
