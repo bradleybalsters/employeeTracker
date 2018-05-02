@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RelativeLayout;
 
 public class EmployeeTaskActivity extends AppCompatActivity
 {
@@ -12,15 +14,24 @@ public class EmployeeTaskActivity extends AppCompatActivity
     Button btnClear;
     Button btnBack;
 
+    RadioButton select1;
+    RadioButton select2;
+
+    RelativeLayout employeeTask;
+
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.employee_task_view);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
+
         btnView = (Button) findViewById(R.id.taskViewButton);
         btnClear= (Button) findViewById(R.id.taskClearButton);
         btnBack = (Button) findViewById(R.id.taskViewBackButton);
+        select1 = (RadioButton) findViewById(R.id.firstRB);
+        select2 = (RadioButton) findViewById(R.id.secondRB);
+        employeeTask = (RelativeLayout) findViewById(R.id.employeeTaskViewLayout);
     }
 
     //Transition between layouts
@@ -44,7 +55,7 @@ public class EmployeeTaskActivity extends AppCompatActivity
                 }
                 if (v == btnClear)
                 {
-
+                    clearSelection();
                 }
             }
         };
@@ -52,5 +63,20 @@ public class EmployeeTaskActivity extends AppCompatActivity
         btnView.setOnClickListener(handler);
         btnBack.setOnClickListener(handler);
         btnClear.setOnClickListener(handler);
+    }
+
+    public void clearSelection()
+    {
+        if (select1.isChecked() || select2.isChecked())
+        {
+            if(select1.isChecked())
+            {
+                select1.setVisibility(View.GONE);
+            }
+            else
+            {
+                select2.setVisibility(View.GONE);
+            }
+        }
     }
 }

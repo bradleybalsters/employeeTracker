@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Employee Tracker</string>
+    <string name="employee_view">Employee View</string>
+    <string name="employer_view">Employer View</string>
+    <string name="employee_task">Employee Tasks</string>
+    <string name="employer_task">Employer Taks</string>
+    <string name="map_view">Map View</string>
 
     <string name="defaultEmployee">Default Name</string>
     <string name="employee1">Cole Jacobs</string>
@@ -13,6 +18,7 @@
     <string name="checkedIn"><u>Checked In</u></string>
 
     <string name="defaultTimer">00:00:00</string>
+    <string name="notUnderlinedTasks">Tasks</string>
 
     <string name="employee">Employee</string>
     <string name="employer">Employer</string>
@@ -26,6 +32,4 @@
     <string name="clear">Clear</string>
     <string name="back">Back</string>
     <string name="exit">Exit</string>
-
-
 </resources>
