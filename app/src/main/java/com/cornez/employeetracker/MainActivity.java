@@ -12,9 +12,9 @@ public class MainActivity extends AppCompatActivity
 {
     private TextView name;
     private TextView timeDisplay;
-    private Button startBtn;
-    private Button stopBtn;
-    private Button resetBtn;
+//    private Button startBtn;
+//    private Button stopBtn;
+//    private Button resetBtn;
 
     private Timer watchTime;
     private long timeInMilliseconds;
@@ -28,18 +28,16 @@ public class MainActivity extends AppCompatActivity
 
         setContentView(R.layout.activity_main);
 
-        // will un comment out all of the commented out buttons once I have references for them.
-
-        //timeDisplay = (TextView) findViewById(R.id.textView1);
-        //startBtn = (Button) findViewById(R.id.start_button);
-        //stopBtn = (Button) findViewById(R.id.stop_button);
-        //resetBtn = (Button) findViewById(R.id.reset_button);
+        timeDisplay = (TextView) findViewById(R.id.mapTimer);
+//        startBtn = (Button) findViewById(R.id.start_button);
+//        stopBtn = (Button) findViewById(R.id.stop_button);
+//        resetBtn = (Button) findViewById(R.id.reset_button);
 
         name = (TextView) findViewById(R.id.mapEmpNameTextView);
         name.setText(EmployerViewActivity.taggedEmployee);
 
-                stopBtn.setEnabled(false);
-        resetBtn.setEnabled(false);
+//        stopBtn.setEnabled(false);
+//        resetBtn.setEnabled(false);
 
         watchTime = new Timer();
 
@@ -47,9 +45,9 @@ public class MainActivity extends AppCompatActivity
     }
 
     public void startTimer(View view){
-        stopBtn.setEnabled(true);
-        startBtn.setEnabled(false);
-        resetBtn.setEnabled(false);
+//        stopBtn.setEnabled(true);
+//        startBtn.setEnabled(false);
+//        resetBtn.setEnabled(false);
 
         watchTime.setStartTime(SystemClock.uptimeMillis());
         mHandler.postDelayed(updateTimerRunnable, 20);
@@ -78,9 +76,9 @@ public class MainActivity extends AppCompatActivity
     };
 
     public void stopTimer(View view){
-        stopBtn.setEnabled(false);
-        startBtn.setEnabled(true);
-        resetBtn.setEnabled(true);
+//        stopBtn.setEnabled(false);
+//        startBtn.setEnabled(true);
+//        resetBtn.setEnabled(true);
 
         watchTime.setStartTime(SystemClock.uptimeMillis());
 

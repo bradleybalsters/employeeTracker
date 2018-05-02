@@ -16,7 +16,7 @@ public class EmployerTaskActivity extends AppCompatActivity
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.employee_view);
+        setContentView(R.layout.employee_task_view);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         btnClear = (Button) findViewById(R.id.taskViewClearButton);
         btnEdit = (Button) findViewById(R.id.taskViewEditButton);

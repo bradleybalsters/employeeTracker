@@ -11,7 +11,9 @@ public class EmployerViewActivity extends AppCompatActivity
 {
     public static String taggedEmployee;
 
-    Button btnView, btnExit, btnTask;
+    Button btnView;
+    Button btnExit;
+    Button btnTask;
     RadioButton firstEmp, secondEmp, thirdEmp;
 
     boolean emp1, emp2, emp3;
@@ -25,8 +27,8 @@ public class EmployerViewActivity extends AppCompatActivity
         setContentView(R.layout.employer_view);
 
         btnView = (Button) findViewById(R.id.employerViewButton);
-        btnExit= (Button) findViewById(R.id.employerViewTaskButton);
-        btnTask = (Button) findViewById(R.id.employerViewExitButton);
+        btnExit= (Button) findViewById(R.id.employerViewExitButton);
+        btnTask = (Button) findViewById(R.id.employerViewTaskButton);
 
         firstEmp = (RadioButton) findViewById(R.id.employee1);
         secondEmp = (RadioButton) findViewById(R.id.employee2);
