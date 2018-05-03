@@ -80,5 +80,8 @@ public class Employee
     }
 
     //Methods
-
+    public void completeTask()
+    {
+        this._task1 = "Completed: " + this._task1;
+    }
 }
