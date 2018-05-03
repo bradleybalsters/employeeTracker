@@ -8,6 +8,8 @@ import android.widget.Button;
 
 public class LandingScreenActivity extends AppCompatActivity
 {
+    public static String employeeCheckedIn;
+
     Button btnEmployer;
     Button btnEmployee;
 

@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 
 public class EmployeeViewActivity extends AppCompatActivity
 {
+    EditText checkInLine;
+
     Button btnIn;
     Button btnOut;
 
@@ -18,7 +21,8 @@ public class EmployeeViewActivity extends AppCompatActivity
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         setContentView(R.layout.employee_view);
         btnIn = (Button) findViewById(R.id.empViewInButton);
-        btnOut= (Button) findViewById(R.id.empViewOutButton);
+        btnOut = (Button) findViewById(R.id.empViewOutButton);
+        checkInLine = (EditText) findViewById(R.id.empViewEditText);
     }
 
     //Transition between layouts
