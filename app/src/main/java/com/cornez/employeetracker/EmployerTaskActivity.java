@@ -66,20 +66,19 @@ public class EmployerTaskActivity extends AppCompatActivity
         btnBack.setOnClickListener(handler);
     }
 
-    //TODO: Fix this
     public void clearChecked()
     {
         if (first.isChecked())
         {
-            first.setVisibility(View.GONE);
+            rel.removeView(first);
         }
         if (second.isChecked())
         {
-            second.setVisibility(View.GONE);
+            rel.removeView(second);
         }
         if (third.isChecked())
         {
-            third.setVisibility(View.GONE);
+            rel.removeView(third);
         }
     }
 }
