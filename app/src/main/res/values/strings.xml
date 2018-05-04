@@ -26,7 +26,7 @@
     <string name="checkIn">Check In</string>
     <string name="checkOut">Check Out</string>
 
-    <string name="employeeName">Employee Name</string>
+    <string name="employeeName">Employee First Name</string>
     <string name="edit">Edit</string>
     <string name="view">View</string>
     <string name="clear">Clear</string>

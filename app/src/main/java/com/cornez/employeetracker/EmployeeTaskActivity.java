@@ -32,6 +32,8 @@ public class EmployeeTaskActivity extends AppCompatActivity
         select1 = (RadioButton) findViewById(R.id.firstRB);
         select2 = (RadioButton) findViewById(R.id.secondRB);
         employeeTask = (RelativeLayout) findViewById(R.id.employeeTaskViewLayout);
+
+        showTasks();
     }
 
     //Transition between layouts
@@ -71,12 +73,53 @@ public class EmployeeTaskActivity extends AppCompatActivity
         {
             if(select1.isChecked())
             {
-                select1.setVisibility(View.GONE);
+                if (LandingScreenActivity.employeeCole.getIsTracked())
+                {
+                    LandingScreenActivity.employeeCole.completeTask(0);
+                }
+                else if (LandingScreenActivity.employeeBob.getIsTracked())
+                {
+                    LandingScreenActivity.employeeBob.completeTask(0);
+                }
+                else
+                {
+                    LandingScreenActivity.employeeKyra.completeTask(0);
+                }
             }
             else
             {
-                select2.setVisibility(View.GONE);
+                if (LandingScreenActivity.employeeCole.getIsTracked())
+                {
+                    LandingScreenActivity.employeeCole.completeTask(1);
+                }
+                else if (LandingScreenActivity.employeeBob.getIsTracked())
+                {
+                    LandingScreenActivity.employeeBob.completeTask(1);
+                }
+                else
+                {
+                    LandingScreenActivity.employeeKyra.completeTask(1);
+                }
             }
+        }
+    }
+
+    public void showTasks()
+    {
+        if (LandingScreenActivity.employeeCole.getIsTracked())
+        {
+            select1.setText(LandingScreenActivity.employeeCole.getTask1());
+            select2.setText(LandingScreenActivity.employeeCole.getTask2());
+        }
+        else if (LandingScreenActivity.employeeBob.getIsTracked())
+        {
+            select1.setText(LandingScreenActivity.employeeBob.getTask1());
+            select2.setText(LandingScreenActivity.employeeBob.getTask2());
+        }
+        else
+        {
+            select1.setText(LandingScreenActivity.employeeKyra.getTask1());
+            select2.setText(LandingScreenActivity.employeeKyra.getTask2());
         }
     }
 }

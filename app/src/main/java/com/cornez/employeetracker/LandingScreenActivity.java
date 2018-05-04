@@ -6,9 +6,13 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import java.util.List;
+
 public class LandingScreenActivity extends AppCompatActivity
 {
-    public static String employeeCheckedIn;
+    public static Employee employeeCole;
+    public static Employee employeeBob;
+    public static Employee employeeKyra;
 
     Button btnEmployer;
     Button btnEmployee;
@@ -21,6 +25,10 @@ public class LandingScreenActivity extends AppCompatActivity
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         btnEmployer = (Button) findViewById(R.id.landingEmployerButton);
         btnEmployee = (Button) findViewById(R.id.landingEmployeeButton);
+
+        employeeCole = new Employee(1,"Cole Jacobs", "Clean a house", "Clean the van");
+        employeeBob = new Employee(2, "Bob Lindsay", "Hammer a nail", "Fire a nailgun");
+        employeeKyra = new Employee(3, "Kyra Mill", "Do the thing", "Example 6");
     }
 
     // Transitions between layouts

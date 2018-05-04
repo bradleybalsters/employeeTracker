@@ -10,6 +10,7 @@ import android.widget.EditText;
 public class EmployeeViewActivity extends AppCompatActivity
 {
     EditText checkInLine;
+    String employee;
 
     Button btnIn;
     Button btnOut;
@@ -34,12 +35,18 @@ public class EmployeeViewActivity extends AppCompatActivity
             {
                 if (v == btnIn)
                 {
+                    trackEmployee();
+
                     Intent intentMain = new Intent(EmployeeViewActivity.this,
                             EmployeeTaskActivity.class);
                     EmployeeViewActivity.this.startActivity(intentMain);
                 }
                 if (v == btnOut)
                 {
+                    LandingScreenActivity.employeeCole.disableTracking();
+                    LandingScreenActivity.employeeBob.disableTracking();
+                    LandingScreenActivity.employeeKyra.disableTracking();
+
                     Intent intentMain = new Intent(EmployeeViewActivity.this,
                             LandingScreenActivity.class);
                     EmployeeViewActivity.this.startActivity(intentMain);
@@ -49,5 +56,21 @@ public class EmployeeViewActivity extends AppCompatActivity
 
         btnIn.setOnClickListener(handler);
         btnOut.setOnClickListener(handler);
+    }
+
+    public void trackEmployee()
+    {
+        employee = checkInLine.getText().toString();
+        switch (employee) {
+            case "Cole":
+                LandingScreenActivity.employeeCole.setIsTracked(true);
+                break;
+            case "Bob":
+                LandingScreenActivity.employeeBob.setIsTracked(true);
+                break;
+            case "Kyra":
+                LandingScreenActivity.employeeKyra.setIsTracked(true);
+                break;
+        }
     }
 }
