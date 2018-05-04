@@ -7,7 +7,8 @@ public class Employee
     private String _name;
     private String _task1;
     private String _task2;
-    private boolean _onTask;
+    private boolean _onTask1;
+    private boolean _onTask2;
     private boolean _isTracked;
 
     public Employee()
@@ -16,7 +17,8 @@ public class Employee
         _name = "Default Employeeman";
         _task1 = "The first thing.";
         _task2 = "The second thing.";
-        _onTask = false;
+        _onTask1 = false;
+        _onTask2 = false;
         _isTracked = false;
     }
 
@@ -26,7 +28,8 @@ public class Employee
         _name = name;
         _task1 = task1;
         _task2 = task2;
-        _onTask = false;
+        _onTask1 = false;
+        _onTask2 = false;
         _isTracked = false;
     }
 
@@ -51,9 +54,14 @@ public class Employee
         return this._task2;
     }
 
-    public boolean getOnTask()
+    public boolean getOnTask1()
     {
-        return  this._onTask;
+        return  this._onTask1;
+    }
+
+    public boolean getOnTask2()
+    {
+        return  this._onTask2;
     }
 
     public boolean getIsTracked()
@@ -82,9 +90,14 @@ public class Employee
         this._task2 = task;
     }
 
-    public void setOnTask(boolean onTask)
+    public void setOnTask1(boolean onTask)
     {
-        this._onTask = onTask;
+        this._onTask1 = onTask;
+    }
+
+    public void setOnTask2(boolean onTask)
+    {
+        this._onTask2 = onTask;
     }
 
     public void setIsTracked(boolean isTracked)
@@ -98,15 +111,19 @@ public class Employee
         if (whichTask == 0)
         {
             this._task1 = "Completed: " + this._task1;
+            this._onTask1 = false;
         }
         else
         {
             this._task2 = "Completed: " + this._task2;
+            this._onTask2 = false;
         }
     }
 
     public void disableTracking()
     {
         this.setIsTracked(false);
+        this._onTask1 = false;
+        this._onTask2 = false;
     }
 }

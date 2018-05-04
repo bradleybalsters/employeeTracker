@@ -41,7 +41,7 @@
         android:id="@+id/mapTaskNameTextView"
         android:text="@string/defaultTask"
         android:layout_centerHorizontal="true"
-        android:layout_below="@id/mapEmpNameTextView"
+        android:layout_below="@+id/mapEmpNameTextView"
         android:layout_marginTop="10dp"
         android:textSize="20sp"
         android:textColor="@color/white"/>
