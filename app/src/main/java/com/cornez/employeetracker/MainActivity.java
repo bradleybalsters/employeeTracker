@@ -122,37 +122,37 @@ public class MainActivity extends AppCompatActivity {
         if (LandingScreenActivity.employeeCole.getIsTracked())
         {
             name.setText(LandingScreenActivity.employeeCole.getName());
-            if (LandingScreenActivity.employeeCole.getOnTask1())
+            if (LandingScreenActivity.employeeCole.getOnTask2())
             {
-                task.setText(LandingScreenActivity.employeeCole.getTask1());
+                task.setText(LandingScreenActivity.employeeCole.getTask2());
             }
             else
             {
-                task.setText(LandingScreenActivity.employeeCole.getTask2());
+                task.setText(LandingScreenActivity.employeeCole.getTask1());
             }
         }
         else if (LandingScreenActivity.employeeBob.getIsTracked())
         {
             name.setText(LandingScreenActivity.employeeBob.getName());
-            if (LandingScreenActivity.employeeBob.getOnTask1())
+            if (LandingScreenActivity.employeeBob.getOnTask2())
             {
-                task.setText(LandingScreenActivity.employeeBob.getTask1());
+                task.setText(LandingScreenActivity.employeeBob.getTask2());
             }
             else
             {
-                task.setText(LandingScreenActivity.employeeBob.getTask2());
+                task.setText(LandingScreenActivity.employeeBob.getTask1());
             }
         }
         else
         {
             name.setText(LandingScreenActivity.employeeKyra.getName());
-            if (LandingScreenActivity.employeeKyra.getOnTask1())
+            if (LandingScreenActivity.employeeKyra.getOnTask2())
             {
-                task.setText(LandingScreenActivity.employeeKyra.getTask1());
+                task.setText(LandingScreenActivity.employeeKyra.getTask2());
             }
             else
             {
-                task.setText(LandingScreenActivity.employeeKyra.getTask2());
+                task.setText(LandingScreenActivity.employeeKyra.getTask1());
             }
         }
     }

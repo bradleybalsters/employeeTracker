@@ -10,6 +10,8 @@ import android.widget.RelativeLayout;
 
 public class EmployerTaskActivity extends AppCompatActivity
 {
+    int whichEmployee;
+
     RelativeLayout rel;
 
     Button btnClear;
@@ -18,7 +20,6 @@ public class EmployerTaskActivity extends AppCompatActivity
 
     CheckBox first;
     CheckBox second;
-    CheckBox third;
 
     @Override
     public void onCreate(Bundle savedInstanceState)
@@ -34,7 +35,9 @@ public class EmployerTaskActivity extends AppCompatActivity
 
         first = (CheckBox) findViewById(R.id.checkBox1);
         second = (CheckBox) findViewById(R.id.checkBox2);
-        third = (CheckBox) findViewById(R.id.checkBox3);
+
+        whichEmployee = getTrackedEmployee();
+        showTasks();
     }
 
     //Transition between layouts
@@ -71,14 +74,50 @@ public class EmployerTaskActivity extends AppCompatActivity
         if (first.isChecked())
         {
             rel.removeView(first);
+            deleteTask1();
         }
         if (second.isChecked())
         {
             rel.removeView(second);
+            deleteTask2();
         }
-        if (third.isChecked())
+    }
+
+    public int getTrackedEmployee()
+    {
+        int id;
+
+        if (LandingScreenActivity.employeeCole.getIsTracked())
         {
-            rel.removeView(third);
+            id = LandingScreenActivity.employeeCole.getId();
+        }
+        else if (LandingScreenActivity.employeeBob.getIsTracked())
+        {
+            id = LandingScreenActivity.employeeBob.getId();
+        }
+        else
+        {
+            id = LandingScreenActivity.employeeKyra.getId();
+        }
+
+        return id;
+    }
+
+    public void showTasks()
+    {
+        switch (whichEmployee)
+        {
+            case 0:
+                first.setText(LandingScreenActivity.employeeCole.getTask1());
+                second.setText(LandingScreenActivity.employeeCole.getTask2());
+                break;
+            case 1:
+                first.setText(LandingScreenActivity.employeeBob.getTask1());
+                second.setText(LandingScreenActivity.employeeBob.getTask2());
+                break;
+            case 2:
+                first.setText(LandingScreenActivity.employeeKyra.getTask1());
+                second.setText(LandingScreenActivity.employeeKyra.getTask2());
         }
     }
 }

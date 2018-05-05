@@ -26,9 +26,9 @@ public class LandingScreenActivity extends AppCompatActivity
         btnEmployer = (Button) findViewById(R.id.landingEmployerButton);
         btnEmployee = (Button) findViewById(R.id.landingEmployeeButton);
 
-        employeeCole = new Employee(1,"Cole Jacobs", "Clean a house", "Clean the van");
-        employeeBob = new Employee(2, "Bob Lindsay", "Hammer a nail", "Fire a nailgun");
-        employeeKyra = new Employee(3, "Kyra Mill", "Do the thing", "Example 6");
+        employeeCole = new Employee(1,"Cole Jacobs", "Clean Cole's van", "Drive Cole's van");
+        employeeBob = new Employee(2, "Bob Lindsay", "Hammer Bob's nail", "Drill Bob's screw");
+        employeeKyra = new Employee(3, "Kyra Mill", "Kyra does the first thing", "Kyra does a second thing");
     }
 
     // Transitions between layouts

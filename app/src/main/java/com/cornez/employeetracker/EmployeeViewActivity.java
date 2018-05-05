@@ -24,6 +24,8 @@ public class EmployeeViewActivity extends AppCompatActivity
         btnIn = (Button) findViewById(R.id.empViewInButton);
         btnOut = (Button) findViewById(R.id.empViewOutButton);
         checkInLine = (EditText) findViewById(R.id.empViewEditText);
+
+        clearTrackers();
     }
 
     //Transition between layouts
@@ -72,5 +74,21 @@ public class EmployeeViewActivity extends AppCompatActivity
                 LandingScreenActivity.employeeKyra.setIsTracked(true);
                 break;
         }
+    }
+
+    public void clearTrackers()
+    {
+        LandingScreenActivity.employeeCole.setIsTracked(false);
+        LandingScreenActivity.employeeBob.setIsTracked(false);
+        LandingScreenActivity.employeeKyra.setIsTracked(false);
+
+        LandingScreenActivity.employeeCole.setOnTask1(false);
+        LandingScreenActivity.employeeCole.setOnTask2(false);
+
+        LandingScreenActivity.employeeBob.setOnTask1(false);
+        LandingScreenActivity.employeeBob.setOnTask2(false);
+
+        LandingScreenActivity.employeeKyra.setOnTask1(false);
+        LandingScreenActivity.employeeKyra.setOnTask2(false);
     }
 }

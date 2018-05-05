@@ -16,9 +16,6 @@ public class EmployerViewActivity extends AppCompatActivity
     Button btnTask;
     RadioButton firstEmp, secondEmp, thirdEmp;
 
-    boolean emp1, emp2, emp3;
-    String trackedEmployee;
-
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
@@ -34,9 +31,8 @@ public class EmployerViewActivity extends AppCompatActivity
         secondEmp = (RadioButton) findViewById(R.id.employee2);
         thirdEmp = (RadioButton) findViewById(R.id.employee3);
 
-        emp1 = false;
-        emp2 = false;
-        emp3 = false;
+        displayEmployees();
+        clearTrackers();
     }
 
     //Transition between layouts
@@ -48,7 +44,8 @@ public class EmployerViewActivity extends AppCompatActivity
             {
                 if (v == btnView)
                 {
-                    taggedEmployee = selectedEmployee();
+                    trackEmployee();
+
                     Intent intentMain = new Intent(EmployerViewActivity.this,
                             MainActivity.class);
                     EmployerViewActivity.this.startActivity(intentMain);
@@ -61,7 +58,6 @@ public class EmployerViewActivity extends AppCompatActivity
                 }
                 if (v == btnTask)
                 {
-                    taggedEmployee = selectedEmployee();
                     Intent intentMain = new Intent(EmployerViewActivity.this,
                             EmployerTaskActivity.class);
                     EmployerViewActivity.this.startActivity(intentMain);
@@ -74,19 +70,42 @@ public class EmployerViewActivity extends AppCompatActivity
         btnTask.setOnClickListener(handler);
     }
 
-    public String selectedEmployee() {
-        if (firstEmp.isChecked()) {
-            emp1 = true;
-            trackedEmployee = "Cole Jacobs";
-        } else if (secondEmp.isChecked()) {
-            emp2 = true;
-            trackedEmployee = "Bob Lindsay";
-        } else
-        {
-            emp3 = true;
-            trackedEmployee = "Kyra Mill";
-        }
+    public void displayEmployees()
+    {
+        firstEmp.setText(LandingScreenActivity.employeeCole.getName());
+        secondEmp.setText(LandingScreenActivity.employeeBob.getName());
+        thirdEmp.setText(LandingScreenActivity.employeeCole.getName());
+    }
 
-        return trackedEmployee;
+    public void trackEmployee()
+    {
+        if (firstEmp.isChecked())
+        {
+            LandingScreenActivity.employeeCole.setIsTracked(true);
+        }
+        else if (secondEmp.isChecked())
+        {
+            LandingScreenActivity.employeeBob.setIsTracked(true);
+        }
+        else
+        {
+            LandingScreenActivity.employeeKyra.setIsTracked(true);
+        }
+    }
+
+    public void clearTrackers()
+    {
+        LandingScreenActivity.employeeCole.setIsTracked(false);
+        LandingScreenActivity.employeeBob.setIsTracked(false);
+        LandingScreenActivity.employeeKyra.setIsTracked(false);
+
+        LandingScreenActivity.employeeCole.setOnTask1(false);
+        LandingScreenActivity.employeeCole.setOnTask2(false);
+
+        LandingScreenActivity.employeeBob.setOnTask1(false);
+        LandingScreenActivity.employeeBob.setOnTask2(false);
+
+        LandingScreenActivity.employeeKyra.setOnTask1(false);
+        LandingScreenActivity.employeeKyra.setOnTask2(false);
     }
 }
