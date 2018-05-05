@@ -77,35 +77,33 @@ public class EmployeeTaskActivity extends AppCompatActivity
             {
                 if (LandingScreenActivity.employeeCole.getIsTracked())
                 {
-                    LandingScreenActivity.employeeCole.completeTask(0);
+                    select1.setText(LandingScreenActivity.employeeCole.completeTask(0));
                 }
                 else if (LandingScreenActivity.employeeBob.getIsTracked())
                 {
-                    LandingScreenActivity.employeeBob.completeTask(0);
+                    select1.setText(LandingScreenActivity.employeeBob.completeTask(0));
                 }
                 else
                 {
-                    LandingScreenActivity.employeeKyra.completeTask(0);
+                    select1.setText(LandingScreenActivity.employeeKyra.completeTask(0));
                 }
             }
             else
             {
                 if (LandingScreenActivity.employeeCole.getIsTracked())
                 {
-                    LandingScreenActivity.employeeCole.completeTask(1);
+                    select2.setText(LandingScreenActivity.employeeCole.completeTask(1));
                 }
                 else if (LandingScreenActivity.employeeBob.getIsTracked())
                 {
-                    LandingScreenActivity.employeeBob.completeTask(1);
+                    select2.setText(LandingScreenActivity.employeeBob.completeTask(1));
                 }
                 else
                 {
-                    LandingScreenActivity.employeeKyra.completeTask(1);
+                    select2.setText(LandingScreenActivity.employeeKyra.completeTask(1));
                 }
             }
         }
-
-        showTasks();
     }
 
     public void showTasks()

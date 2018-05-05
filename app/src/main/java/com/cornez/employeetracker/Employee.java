@@ -11,6 +11,8 @@ public class Employee
     private boolean _onTask2;
     private boolean _isTracked;
 
+    private boolean task1AlreadyComplete = false, task2AlreadyComplete = false;
+
     public Employee()
     {
         _id = 0;
@@ -106,17 +108,42 @@ public class Employee
     }
 
     //Methods
-    public void completeTask(int whichTask)
+    public String completeTask(int whichTask)
     {
+        String complete = "Complete: ";
+        String display;
+
         if (whichTask == 0)
         {
-            this.setTask1("Completed: " + this.getTask1());
-            this.setOnTask1(false);
+            if (!task1AlreadyComplete)
+            {
+                display = (complete + this.getTask1());
+                task1AlreadyComplete = true;
+                this.setOnTask1(false);
+            }
+            else
+            {
+                display = (this.getTask1());
+                task1AlreadyComplete = false;
+            }
+
+            return display;
         }
         else
         {
-            this.setTask2("Completed: " + this.getTask2());
-            this.setOnTask2(false);
+            if (!task2AlreadyComplete)
+            {
+                display = (complete + this.getTask2());
+                task2AlreadyComplete = true;
+                this.setOnTask2(false);
+            }
+            else
+            {
+                display = (this.getTask2());
+                task2AlreadyComplete = false;
+            }
+
+            return display;
         }
     }
 
