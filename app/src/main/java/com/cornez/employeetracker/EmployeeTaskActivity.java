@@ -110,18 +110,27 @@ public class EmployeeTaskActivity extends AppCompatActivity
     {
         if (LandingScreenActivity.employeeCole.getIsTracked())
         {
-            select1.setText(LandingScreenActivity.employeeCole.getTask1());
-            select2.setText(LandingScreenActivity.employeeCole.getTask2());
+            if (!LandingScreenActivity.employeeCole.t1IsDeleted()) {
+                select1.setText(LandingScreenActivity.employeeCole.getTask1());
+            } if (!LandingScreenActivity.employeeCole.t2IsDeleted()) {
+                select2.setText(LandingScreenActivity.employeeCole.getTask2());
+            }
         }
         else if (LandingScreenActivity.employeeBob.getIsTracked())
         {
-            select1.setText(LandingScreenActivity.employeeBob.getTask1());
-            select2.setText(LandingScreenActivity.employeeBob.getTask2());
+            if (!LandingScreenActivity.employeeBob.t1IsDeleted()) {
+                select1.setText(LandingScreenActivity.employeeBob.getTask1());
+            } if (!LandingScreenActivity.employeeBob.t2IsDeleted()) {
+                select2.setText(LandingScreenActivity.employeeBob.getTask2());
+            }
         }
         else
         {
-            select1.setText(LandingScreenActivity.employeeKyra.getTask1());
-            select2.setText(LandingScreenActivity.employeeKyra.getTask2());
+            if (!LandingScreenActivity.employeeKyra.t1IsDeleted()) {
+                select1.setText(LandingScreenActivity.employeeKyra.getTask1());
+            } if (!LandingScreenActivity.employeeKyra.t2IsDeleted()) {
+                select2.setText(LandingScreenActivity.employeeKyra.getTask2());
+            }
         }
     }
 
