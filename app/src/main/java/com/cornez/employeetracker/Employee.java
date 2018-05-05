@@ -126,4 +126,42 @@ public class Employee
         this._onTask1 = false;
         this._onTask2 = false;
     }
+
+    public void deleteTask(int which)
+    {
+        if (which == 0)
+        {
+            this.setTask1("");
+            this.setOnTask1(false);
+        }
+        else
+        {
+            this.setTask2("");
+            this.setOnTask2(false);
+        }
+    }
+
+    public boolean t1IsDeleted()
+    {
+        if (this.getTask1().equals(""))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+    public boolean t2IsDeleted()
+    {
+        if (this.getTask2().equals(""))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 }
