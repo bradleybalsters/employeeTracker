@@ -9,9 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-public class MainActivity extends AppCompatActivity
-{
+public class MainActivity extends AppCompatActivity {
     private TextView name;
+    private TextView task;
     private TextView timeDisplay;
     Button exitBtn;
 //    private Button startBtn;
@@ -22,9 +22,9 @@ public class MainActivity extends AppCompatActivity
     private long timeInMilliseconds;
 
     private Handler mHandler;
+
     @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.landing_screen);
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity
 //        resetBtn = (Button) findViewById(R.id.reset_button);
         overridePendingTransition(R.anim.fade_in, R.anim.fade_out);
         name = (TextView) findViewById(R.id.mapEmpNameTextView);
-        name.setText(EmployerViewActivity.taggedEmployee);
+        task = (TextView) findViewById(R.id.mapTaskNameTextView);
 
 //        stopBtn.setEnabled(false);
 //        resetBtn.setEnabled(false);
@@ -45,16 +45,15 @@ public class MainActivity extends AppCompatActivity
         watchTime = new Timer();
 
         mHandler = new Handler();
+
+        //Pipe Employee Information
+        displayInfo();
     }
 
-    public void changeView(View view)
-    {
-        View.OnClickListener handler = new View.OnClickListener()
-        {
-            public void onClick(View v)
-            {
-                if (v == exitBtn)
-                {
+    public void changeView(View view) {
+        View.OnClickListener handler = new View.OnClickListener() {
+            public void onClick(View v) {
+                if (v == exitBtn) {
                     Intent intentMain = new Intent(MainActivity.this,
                             LandingScreenActivity.class);
                     MainActivity.this.startActivity(intentMain);
@@ -65,7 +64,7 @@ public class MainActivity extends AppCompatActivity
         exitBtn.setOnClickListener(handler);
     }
 
-    public void startTimer(View view){
+    public void startTimer(View view) {
 //        stopBtn.setEnabled(true);
 //        startBtn.setEnabled(false);
 //        resetBtn.setEnabled(false);
@@ -82,21 +81,21 @@ public class MainActivity extends AppCompatActivity
 
             watchTime.setTimeUpdate(watchTime.getmStoredTime() + timeInMilliseconds);
 
-            int time = (int) (watchTime.getTimeUpdate()/1000);
+            int time = (int) (watchTime.getTimeUpdate() / 1000);
 
             int minutes = time / 60;
             int seconds = time % 60;
             int milliseconds = (int) (watchTime.getTimeUpdate() % 1000);
 
-            timeDisplay.setText(String.format("%02d",minutes)+":"+String.format("%02d",seconds)+
-                    ":"+String.format("%02d", milliseconds));
+            timeDisplay.setText(String.format("%02d", minutes) + ":" + String.format("%02d", seconds) +
+                    ":" + String.format("%02d", milliseconds));
 
             mHandler.postDelayed(this, 0);
 
         }
     };
 
-    public void stopTimer(View view){
+    public void stopTimer(View view) {
 //        stopBtn.setEnabled(false);
 //        startBtn.setEnabled(true);
 //        resetBtn.setEnabled(true);
@@ -116,7 +115,45 @@ public class MainActivity extends AppCompatActivity
 
         timeDisplay.setText(String.format("%02d", minutes) + ":" + String.format("%02d", seconds) +
                 ":" + String.format("%02d", milliseconds));
+    }
 
-
+    public void displayInfo()
+    {
+        if (LandingScreenActivity.employeeCole.getIsTracked())
+        {
+            name.setText(LandingScreenActivity.employeeCole.getName());
+            if (LandingScreenActivity.employeeCole.getOnTask2())
+            {
+                task.setText(LandingScreenActivity.employeeCole.getTask2());
+            }
+            else
+            {
+                task.setText(LandingScreenActivity.employeeCole.getTask1());
+            }
+        }
+        else if (LandingScreenActivity.employeeBob.getIsTracked())
+        {
+            name.setText(LandingScreenActivity.employeeBob.getName());
+            if (LandingScreenActivity.employeeBob.getOnTask2())
+            {
+                task.setText(LandingScreenActivity.employeeBob.getTask2());
+            }
+            else
+            {
+                task.setText(LandingScreenActivity.employeeBob.getTask1());
+            }
+        }
+        else
+        {
+            name.setText(LandingScreenActivity.employeeKyra.getName());
+            if (LandingScreenActivity.employeeKyra.getOnTask2())
+            {
+                task.setText(LandingScreenActivity.employeeKyra.getTask2());
+            }
+            else
+            {
+                task.setText(LandingScreenActivity.employeeKyra.getTask1());
+            }
         }
     }
+}
