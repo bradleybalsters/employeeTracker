@@ -31,8 +31,8 @@ public class EmployerViewActivity extends AppCompatActivity
         secondEmp = (RadioButton) findViewById(R.id.employee2);
         thirdEmp = (RadioButton) findViewById(R.id.employee3);
 
-        displayEmployees();
         clearTrackers();
+        displayEmployees();
     }
 
     //Transition between layouts
@@ -74,7 +74,7 @@ public class EmployerViewActivity extends AppCompatActivity
     {
         firstEmp.setText(LandingScreenActivity.employeeCole.getName());
         secondEmp.setText(LandingScreenActivity.employeeBob.getName());
-        thirdEmp.setText(LandingScreenActivity.employeeCole.getName());
+        thirdEmp.setText(LandingScreenActivity.employeeKyra.getName());
     }
 
     public void trackEmployee()

@@ -36,7 +36,6 @@ public class EmployerTaskActivity extends AppCompatActivity
         first = (CheckBox) findViewById(R.id.checkBox1);
         second = (CheckBox) findViewById(R.id.checkBox2);
 
-        whichEmployee = getTrackedEmployee();
         showTasks();
     }
 
@@ -83,66 +82,46 @@ public class EmployerTaskActivity extends AppCompatActivity
         }
     }
 
-    public int getTrackedEmployee()
-    {
-        int id;
-
-        if (LandingScreenActivity.employeeCole.getIsTracked())
-        {
-            id = LandingScreenActivity.employeeCole.getId();
-        }
-        else if (LandingScreenActivity.employeeBob.getIsTracked())
-        {
-            id = LandingScreenActivity.employeeBob.getId();
-        }
-        else
-        {
-            id = LandingScreenActivity.employeeKyra.getId();
-        }
-
-        return id;
-    }
-
     public void showTasks()
     {
-        switch (whichEmployee)
-        {
-            case 0:
-                if ((LandingScreenActivity.employeeCole.t1IsDeleted())) {
+        if (LandingScreenActivity.employeeCole.getIsTracked()) {
+                if (!(LandingScreenActivity.employeeCole.t1IsDeleted())) {
                     first.setText(LandingScreenActivity.employeeCole.getTask1());
                 } else {
                     rel.removeView(first);
                 }
-                if ((LandingScreenActivity.employeeCole.t2IsDeleted())) {
+                if (!(LandingScreenActivity.employeeCole.t2IsDeleted())) {
                     second.setText(LandingScreenActivity.employeeCole.getTask2());
                 } else {
                     rel.removeView(second);
                 }
-                break;
-            case 1:
-                if ((LandingScreenActivity.employeeBob.t1IsDeleted())) {
+            }
+            else if (LandingScreenActivity.employeeBob.getIsTracked())
+            {
+                if (!(LandingScreenActivity.employeeBob.t1IsDeleted())) {
                     first.setText(LandingScreenActivity.employeeBob.getTask1());
                 } else {
                     rel.removeView(first);
                 }
-                if ((LandingScreenActivity.employeeBob.t2IsDeleted())) {
+                if (!(LandingScreenActivity.employeeBob.t2IsDeleted())) {
                     second.setText(LandingScreenActivity.employeeBob.getTask2());
                 } else {
                     rel.removeView(second);
                 }
-                break;
-            case 2:
-                if ((LandingScreenActivity.employeeKyra.t1IsDeleted())) {
+            }
+            else
+            {
+                if (!(LandingScreenActivity.employeeKyra.t1IsDeleted())) {
                     first.setText(LandingScreenActivity.employeeKyra.getTask1());
                 } else {
                     rel.removeView(first);
                 }
-                if ((LandingScreenActivity.employeeKyra.t2IsDeleted())) {
+                if (!(LandingScreenActivity.employeeKyra.t2IsDeleted())) {
                     second.setText(LandingScreenActivity.employeeKyra.getTask2());
                 } else {
                     rel.removeView(second);
                 }
-        }
+            }
     }
 
     public void deleteTask1()

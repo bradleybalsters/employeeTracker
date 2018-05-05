@@ -45,6 +45,8 @@ public class EmployeeTaskActivity extends AppCompatActivity
             {
                 if (v == btnView)
                 {
+                    trackTask();
+
                     Intent intentMain = new Intent(EmployeeTaskActivity.this,
                             MainActivity.class);
                     EmployeeTaskActivity.this.startActivity(intentMain);
@@ -102,6 +104,8 @@ public class EmployeeTaskActivity extends AppCompatActivity
                 }
             }
         }
+
+        showTasks();
     }
 
     public void showTasks()
@@ -120,6 +124,34 @@ public class EmployeeTaskActivity extends AppCompatActivity
         {
             select1.setText(LandingScreenActivity.employeeKyra.getTask1());
             select2.setText(LandingScreenActivity.employeeKyra.getTask2());
+        }
+    }
+
+    public void trackTask()
+    {
+        if (LandingScreenActivity.employeeCole.getIsTracked())
+        {
+            if ((select2.isChecked())) {
+                LandingScreenActivity.employeeCole.setOnTask2(true);
+            } else {
+                LandingScreenActivity.employeeCole.setOnTask1(true);
+            }
+        }
+        else if (LandingScreenActivity.employeeBob.getIsTracked())
+        {
+            if ((select2.isChecked())) {
+                LandingScreenActivity.employeeBob.setOnTask2(true);
+            } else {
+                LandingScreenActivity.employeeBob.setOnTask1(true);
+            }
+        }
+        else
+        {
+            if ((select2.isChecked())) {
+                LandingScreenActivity.employeeKyra.setOnTask2(true);
+            } else {
+                LandingScreenActivity.employeeKyra.setOnTask1(true);
+            }
         }
     }
 }

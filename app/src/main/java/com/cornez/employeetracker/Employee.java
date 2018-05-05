@@ -110,21 +110,21 @@ public class Employee
     {
         if (whichTask == 0)
         {
-            this._task1 = "Completed: " + this._task1;
-            this._onTask1 = false;
+            this.setTask1("Completed: " + this.getTask1());
+            this.setOnTask1(false);
         }
         else
         {
-            this._task2 = "Completed: " + this._task2;
-            this._onTask2 = false;
+            this.setTask2("Completed: " + this.getTask2());
+            this.setOnTask2(false);
         }
     }
 
     public void disableTracking()
     {
         this.setIsTracked(false);
-        this._onTask1 = false;
-        this._onTask2 = false;
+        this.setOnTask1(false);
+        this.setOnTask2(false);
     }
 
     public void deleteTask(int which)
