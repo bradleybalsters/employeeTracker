@@ -58,6 +58,8 @@ public class EmployerViewActivity extends AppCompatActivity
                 }
                 if (v == btnTask)
                 {
+                    trackEmployee();
+
                     Intent intentMain = new Intent(EmployerViewActivity.this,
                             EmployerTaskActivity.class);
                     EmployerViewActivity.this.startActivity(intentMain);

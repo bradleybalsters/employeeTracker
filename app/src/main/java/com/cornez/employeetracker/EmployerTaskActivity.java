@@ -10,7 +10,8 @@ import android.widget.RelativeLayout;
 
 public class EmployerTaskActivity extends AppCompatActivity
 {
-    int whichEmployee;
+    public int whichEmployee;
+    public int id;
 
     RelativeLayout rel;
 
@@ -36,6 +37,7 @@ public class EmployerTaskActivity extends AppCompatActivity
         first = (CheckBox) findViewById(R.id.checkBox1);
         second = (CheckBox) findViewById(R.id.checkBox2);
 
+        whichEmployee = getTrackedEmployee();
         showTasks();
     }
 
@@ -82,9 +84,29 @@ public class EmployerTaskActivity extends AppCompatActivity
         }
     }
 
+    public int getTrackedEmployee()
+    {
+        if (LandingScreenActivity.employeeCole.getIsTracked())
+        {
+            id = 0;
+        }
+        else if (LandingScreenActivity.employeeBob.getIsTracked())
+        {
+            id = 1;
+        }
+        else
+        {
+            id = 2;
+        }
+
+        return id;
+    }
+
     public void showTasks()
     {
-        if (LandingScreenActivity.employeeCole.getIsTracked()) {
+        switch (whichEmployee)
+        {
+            case 0:
                 if (!(LandingScreenActivity.employeeCole.t1IsDeleted())) {
                     first.setText(LandingScreenActivity.employeeCole.getTask1());
                 } else {
@@ -95,9 +117,8 @@ public class EmployerTaskActivity extends AppCompatActivity
                 } else {
                     rel.removeView(second);
                 }
-            }
-            else if (LandingScreenActivity.employeeBob.getIsTracked())
-            {
+                break;
+            case 1:
                 if (!(LandingScreenActivity.employeeBob.t1IsDeleted())) {
                     first.setText(LandingScreenActivity.employeeBob.getTask1());
                 } else {
@@ -108,9 +129,8 @@ public class EmployerTaskActivity extends AppCompatActivity
                 } else {
                     rel.removeView(second);
                 }
-            }
-            else
-            {
+                break;
+            case 2:
                 if (!(LandingScreenActivity.employeeKyra.t1IsDeleted())) {
                     first.setText(LandingScreenActivity.employeeKyra.getTask1());
                 } else {
@@ -121,7 +141,8 @@ public class EmployerTaskActivity extends AppCompatActivity
                 } else {
                     rel.removeView(second);
                 }
-            }
+                break;
+        }
     }
 
     public void deleteTask1()
